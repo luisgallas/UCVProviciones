@@ -17,19 +17,21 @@ namespace UCVProviciones
 
         private void btnAceptar_Click_Click(object sender, EventArgs e)
         {
- 
-                string usuario = txtUsuario.Text;
-                string contraseña = txtContraseña.Text;
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
 
-                if (ValidarUsuario(usuario, contraseña))
-                {
-                    MessageBox.Show("Login exitoso");
-                    // Aquí puedes agregar el código para abrir una nueva ventana o lo que necesites hacer después del login
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrectos");
-                }
+            var rol = ValidarUsuario(usuario, contraseña);
+            if (rol != null)
+            {
+                MessageBox.Show("Login exitoso");
+                FormMenu formMenu = new FormMenu(rol);
+                formMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
 
         private void btnCancelar_Click_Click(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace UCVProviciones
                 formRegistro.ShowDialog();
             }
         }
-        private bool ValidarUsuario(string usuario, string contraseña)
+        private string ValidarUsuario(string usuario, string contraseña)//poner de nuevo boll despues
         {
             if (File.Exists(UsuariosFilePath))
             {
@@ -59,12 +61,12 @@ namespace UCVProviciones
                 {
                     if (u["usuario"].ToString() == usuario && u["contraseña"].ToString() == contraseña)
                     {
-                        return true;
+                        return u["rol"].ToString();
                     }
                 }
             }
 
-            return false;
+            return null;
         }
     }
 }

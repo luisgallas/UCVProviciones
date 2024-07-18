@@ -25,11 +25,13 @@ namespace UCVProviciones
         {
             string usuario = txtNuevoUsuario.Text;
             string contraseña = txtNuevaContraseña.Text;
+            string rol = cmbRol.SelectedItem.ToString();
 
             var nuevoUsuario = new JObject
             {
                 { "usuario", usuario },
-                { "contraseña", contraseña }
+                { "contraseña", contraseña },
+                { "rol", rol }
             };
 
             JArray usuarios;
