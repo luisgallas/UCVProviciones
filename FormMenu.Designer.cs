@@ -42,6 +42,7 @@
             btnSolicitarCompras.TabIndex = 0;
             btnSolicitarCompras.Text = "Solicitar compras";
             btnSolicitarCompras.UseVisualStyleBackColor = true;
+            btnSolicitarCompras.Click += btnSolicitarCompras_Click;
             // 
             // btnVerificarEstadoSolicitudes
             // 

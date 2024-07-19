@@ -13,9 +13,11 @@ namespace UCVProviciones
     public partial class FormMenu : Form
     {
         private string _rol;
+        private string _usuario;
 
-        public FormMenu(string rol)
+        public FormMenu(string usuario, string rol)
         {
+            _usuario = usuario;
             _rol = rol;
             InitializeComponent();
             ConfigurarMenuPorRol();
@@ -49,11 +51,17 @@ namespace UCVProviciones
                     break;
             }
         }
-        
+
+
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
         }
 
+        private void btnSolicitarCompras_Click(object sender, EventArgs e)
+        {
+            var formSolicitudCompras = new FormSolicitudCompras(_usuario);
+            formSolicitudCompras.ShowDialog();
+        }
     }
 }

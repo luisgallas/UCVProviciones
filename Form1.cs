@@ -24,7 +24,7 @@ namespace UCVProviciones
             if (rol != null)
             {
                 MessageBox.Show("Login exitoso");
-                FormMenu formMenu = new FormMenu(rol);
+                FormMenu formMenu = new FormMenu(usuario,rol);
                 formMenu.Show();
                 this.Hide();
             }
