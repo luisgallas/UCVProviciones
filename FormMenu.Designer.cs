@@ -61,6 +61,7 @@
             btnAprobarPedidos.TabIndex = 2;
             btnAprobarPedidos.Text = "Aprobar pedidos";
             btnAprobarPedidos.UseVisualStyleBackColor = true;
+            btnAprobarPedidos.Click += btnAprobarPedidos_Click;
             // 
             // btnAccesoTotal
             // 

@@ -63,5 +63,11 @@ namespace UCVProviciones
             var formSolicitudCompras = new FormSolicitudCompras(_usuario);
             formSolicitudCompras.ShowDialog();
         }
+
+        private void btnAprobarPedidos_Click(object sender, EventArgs e)
+        {
+            var formGestionSolicitudes = new FormGestionSolicitudes();
+            formGestionSolicitudes.ShowDialog();
+        }
     }
 }
