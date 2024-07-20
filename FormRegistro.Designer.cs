@@ -115,11 +115,14 @@ namespace UCVProviciones
             lblRol = new Label();
             cmbRol = new ComboBox();
             btnGuardar = new Button();
+            NombreNuevoUsuario = new Label();
+            ContraseñaNueva = new Label();
+            lblRolUsuario = new Label();
             SuspendLayout();
             // 
             // txtNuevoUsuario
             // 
-            txtNuevoUsuario.Location = new Point(180, 43);
+            txtNuevoUsuario.Location = new Point(122, 104);
             txtNuevoUsuario.Margin = new Padding(4, 5, 4, 5);
             txtNuevoUsuario.Name = "txtNuevoUsuario";
             txtNuevoUsuario.Size = new Size(207, 27);
@@ -127,7 +130,7 @@ namespace UCVProviciones
             // 
             // txtNuevaContraseña
             // 
-            txtNuevaContraseña.Location = new Point(180, 105);
+            txtNuevaContraseña.Location = new Point(122, 176);
             txtNuevaContraseña.Margin = new Padding(4, 5, 4, 5);
             txtNuevaContraseña.Name = "txtNuevaContraseña";
             txtNuevaContraseña.PasswordChar = '*';
@@ -163,7 +166,7 @@ namespace UCVProviciones
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
             cmbRol.Items.AddRange(new object[] { "funcionario", "directivo", "administrador" });
-            cmbRol.Location = new Point(180, 166);
+            cmbRol.Location = new Point(122, 262);
             cmbRol.Margin = new Padding(4, 5, 4, 5);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(207, 28);
@@ -171,7 +174,7 @@ namespace UCVProviciones
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(180, 232);
+            btnGuardar.Location = new Point(122, 342);
             btnGuardar.Margin = new Padding(4, 5, 4, 5);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(100, 35);
@@ -180,11 +183,41 @@ namespace UCVProviciones
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click_Click;
             // 
+            // NombreNuevoUsuario
+            // 
+            NombreNuevoUsuario.AutoSize = true;
+            NombreNuevoUsuario.Location = new Point(122, 71);
+            NombreNuevoUsuario.Name = "NombreNuevoUsuario";
+            NombreNuevoUsuario.Size = new Size(59, 20);
+            NombreNuevoUsuario.TabIndex = 10;
+            NombreNuevoUsuario.Text = "Usuario";
+            // 
+            // ContraseñaNueva
+            // 
+            ContraseñaNueva.AutoSize = true;
+            ContraseñaNueva.Location = new Point(122, 151);
+            ContraseñaNueva.Name = "ContraseñaNueva";
+            ContraseñaNueva.Size = new Size(83, 20);
+            ContraseñaNueva.TabIndex = 11;
+            ContraseñaNueva.Text = "Contraseña";
+            // 
+            // lblRolUsuario
+            // 
+            lblRolUsuario.AutoSize = true;
+            lblRolUsuario.Location = new Point(122, 236);
+            lblRolUsuario.Name = "lblRolUsuario";
+            lblRolUsuario.Size = new Size(110, 20);
+            lblRolUsuario.TabIndex = 12;
+            lblRolUsuario.Text = "Rol del Usuario";
+            // 
             // FormRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(687, 439);
+            Controls.Add(lblRolUsuario);
+            Controls.Add(ContraseñaNueva);
+            Controls.Add(NombreNuevoUsuario);
             Controls.Add(btnGuardar);
             Controls.Add(cmbRol);
             Controls.Add(lblRol);
@@ -206,5 +239,8 @@ namespace UCVProviciones
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Button btnGuardar;
+        private Label NombreNuevoUsuario;
+        private Label ContraseñaNueva;
+        private Label lblRolUsuario;
     }
 }

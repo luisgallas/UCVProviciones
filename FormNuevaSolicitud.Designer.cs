@@ -57,6 +57,7 @@
             lblCantidad = new Label();
             lblDescripcion = new Label();
             btnGuardar = new Button();
+            btnAtrasNSC = new Button();
             SuspendLayout();
             // 
             // txtCantidad
@@ -106,11 +107,22 @@
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
             // 
+            // btnAtrasNSC
+            // 
+            btnAtrasNSC.Location = new Point(343, 175);
+            btnAtrasNSC.Name = "btnAtrasNSC";
+            btnAtrasNSC.Size = new Size(94, 29);
+            btnAtrasNSC.TabIndex = 5;
+            btnAtrasNSC.Text = "Atras";
+            btnAtrasNSC.UseVisualStyleBackColor = true;
+            btnAtrasNSC.Click += btnAtrasNSC_Click;
+            // 
             // FormNuevaSolicitud
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(739, 405);
+            Controls.Add(btnAtrasNSC);
             Controls.Add(btnGuardar);
             Controls.Add(lblDescripcion);
             Controls.Add(lblCantidad);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnGuardar;
+        private Button btnAtrasNSC;
     }
 }

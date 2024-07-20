@@ -32,6 +32,7 @@
             btnVerificarEstadoSolicitudes = new Button();
             btnAprobarPedidos = new Button();
             btnAccesoTotal = new Button();
+            btnAtrasLogin = new Button();
             SuspendLayout();
             // 
             // btnSolicitarCompras
@@ -46,7 +47,7 @@
             // 
             // btnVerificarEstadoSolicitudes
             // 
-            btnVerificarEstadoSolicitudes.Location = new Point(2, 70);
+            btnVerificarEstadoSolicitudes.Location = new Point(200, 12);
             btnVerificarEstadoSolicitudes.Name = "btnVerificarEstadoSolicitudes";
             btnVerificarEstadoSolicitudes.Size = new Size(192, 29);
             btnVerificarEstadoSolicitudes.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnAprobarPedidos
             // 
-            btnAprobarPedidos.Location = new Point(3, 133);
+            btnAprobarPedidos.Location = new Point(398, 12);
             btnAprobarPedidos.Name = "btnAprobarPedidos";
             btnAprobarPedidos.Size = new Size(191, 29);
             btnAprobarPedidos.TabIndex = 2;
@@ -65,18 +66,29 @@
             // 
             // btnAccesoTotal
             // 
-            btnAccesoTotal.Location = new Point(3, 197);
+            btnAccesoTotal.Location = new Point(605, 12);
             btnAccesoTotal.Name = "btnAccesoTotal";
             btnAccesoTotal.Size = new Size(191, 29);
             btnAccesoTotal.TabIndex = 3;
             btnAccesoTotal.Text = "Acceso Total";
             btnAccesoTotal.UseVisualStyleBackColor = true;
             // 
+            // btnAtrasLogin
+            // 
+            btnAtrasLogin.Location = new Point(36, 302);
+            btnAtrasLogin.Name = "btnAtrasLogin";
+            btnAtrasLogin.Size = new Size(94, 29);
+            btnAtrasLogin.TabIndex = 4;
+            btnAtrasLogin.Text = "Atras";
+            btnAtrasLogin.UseVisualStyleBackColor = true;
+            btnAtrasLogin.Click += btnAtrasLogin_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(836, 450);
+            Controls.Add(btnAtrasLogin);
             Controls.Add(btnAccesoTotal);
             Controls.Add(btnAprobarPedidos);
             Controls.Add(btnVerificarEstadoSolicitudes);
@@ -93,5 +105,6 @@
         private Button btnVerificarEstadoSolicitudes;
         private Button btnAprobarPedidos;
         private Button btnAccesoTotal;
+        private Button btnAtrasLogin;
     }
 }

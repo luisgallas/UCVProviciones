@@ -23,7 +23,7 @@ namespace UCVProviciones
             var rol = ValidarUsuario(usuario, contraseña);
             if (rol != null)
             {
-                MessageBox.Show("Login exitoso");
+               // MessageBox.Show("Login exitoso");
                 FormMenu formMenu = new FormMenu(usuario,rol);
                 formMenu.Show();
                 this.Hide();

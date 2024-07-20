@@ -58,5 +58,10 @@ namespace UCVProviciones
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void btnAtrasNSC_Click(object sender, EventArgs e)
+        {
+            this.Close ( ); 
+        }
     }
 }

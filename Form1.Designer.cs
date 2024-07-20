@@ -28,11 +28,12 @@
             txtUsuario = new TextBox();
             txtContraseña = new TextBox();
             btnRegistrar_Click = new Button();
+            lblProviciones = new Label();
             SuspendLayout();
             // 
             // btnAceptar_Click
             // 
-            btnAceptar_Click.Location = new Point(190, 330);
+            btnAceptar_Click.Location = new Point(267, 335);
             btnAceptar_Click.Name = "btnAceptar_Click";
             btnAceptar_Click.Size = new Size(94, 29);
             btnAceptar_Click.TabIndex = 0;
@@ -42,7 +43,7 @@
             // 
             // btnCancelar_Click
             // 
-            btnCancelar_Click.Location = new Point(371, 330);
+            btnCancelar_Click.Location = new Point(445, 335);
             btnCancelar_Click.Name = "btnCancelar_Click";
             btnCancelar_Click.Size = new Size(94, 29);
             btnCancelar_Click.TabIndex = 1;
@@ -53,7 +54,7 @@
             // lableUsuario
             // 
             lableUsuario.AutoSize = true;
-            lableUsuario.Location = new Point(208, 51);
+            lableUsuario.Location = new Point(343, 113);
             lableUsuario.Name = "lableUsuario";
             lableUsuario.Size = new Size(59, 20);
             lableUsuario.TabIndex = 2;
@@ -62,7 +63,7 @@
             // labelContraseña
             // 
             labelContraseña.AutoSize = true;
-            labelContraseña.Location = new Point(221, 186);
+            labelContraseña.Location = new Point(343, 209);
             labelContraseña.Name = "labelContraseña";
             labelContraseña.Size = new Size(83, 20);
             labelContraseña.TabIndex = 3;
@@ -70,16 +71,16 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(208, 91);
+            txtUsuario.Location = new Point(343, 151);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(125, 27);
+            txtUsuario.Size = new Size(177, 27);
             txtUsuario.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(208, 226);
+            txtContraseña.Location = new Point(343, 254);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(125, 27);
+            txtContraseña.Size = new Size(177, 27);
             txtContraseña.TabIndex = 5;
             // 
             // btnRegistrar_Click
@@ -92,11 +93,23 @@
             btnRegistrar_Click.UseVisualStyleBackColor = true;
             btnRegistrar_Click.Click += btnRegistrar_Click_Click;
             // 
+            // lblProviciones
+            // 
+            lblProviciones.AutoSize = true;
+            lblProviciones.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProviciones.ForeColor = SystemColors.ActiveCaptionText;
+            lblProviciones.Location = new Point(233, 30);
+            lblProviciones.Name = "lblProviciones";
+            lblProviciones.Size = new Size(371, 35);
+            lblProviciones.TabIndex = 7;
+            lblProviciones.Text = "PROVISIONES UC GUAIRA";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 485);
+            Controls.Add(lblProviciones);
             Controls.Add(btnRegistrar_Click);
             Controls.Add(txtContraseña);
             Controls.Add(txtUsuario);
@@ -120,5 +133,6 @@
         private TextBox txtUsuario;
         private TextBox txtContraseña;
         private Button btnRegistrar_Click;
+        private Label lblProviciones;
     }
 }
