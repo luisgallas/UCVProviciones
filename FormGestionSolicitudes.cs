@@ -81,5 +81,43 @@ namespace UCVProviciones
                 MessageBox.Show("Seleccione una solicitud.");
             }
         }
+
+        private void btnATRasGSC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarSolicitud();
+        }
+        private void EliminarSolicitud()
+        {
+            if (dataGridViewSolicitudes.SelectedRows.Count > 0)
+            {
+                var filaSeleccionada = dataGridViewSolicitudes.SelectedRows[0];
+                var usuario = filaSeleccionada.Cells["usuario"].Value.ToString();
+                var descripcion = filaSeleccionada.Cells["descripcion"].Value.ToString();
+
+                if (File.Exists(SolicitudesFilePath))
+                {
+                    var jsonData = File.ReadAllText(SolicitudesFilePath);
+                    var solicitudes = JArray.Parse(jsonData);
+
+                    var solicitud = solicitudes.FirstOrDefault(s => s["usuario"].ToString() == usuario && s["descripcion"].ToString() == descripcion);
+
+                    if (solicitud != null)
+                    {
+                        solicitudes.Remove(solicitud);
+                        File.WriteAllText(SolicitudesFilePath, solicitudes.ToString());
+                        CargarSolicitudes();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una solicitud.");
+            }
+        }
     }
 }
