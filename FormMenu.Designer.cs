@@ -1,6 +1,6 @@
 ﻿namespace UCVProviciones
 {
-    partial class FormMenu
+    /*partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -51,8 +51,9 @@
             btnVerificarEstadoSolicitudes.Name = "btnVerificarEstadoSolicitudes";
             btnVerificarEstadoSolicitudes.Size = new Size(192, 29);
             btnVerificarEstadoSolicitudes.TabIndex = 1;
-            btnVerificarEstadoSolicitudes.Text = "verificar solicitud";
+            btnVerificarEstadoSolicitudes.Text = "Verificar Pedidos";
             btnVerificarEstadoSolicitudes.UseVisualStyleBackColor = true;
+            btnVerificarEstadoSolicitudes.Click += btnVerificarEstadoSolicitudes_Click;
             // 
             // btnAprobarPedidos
             // 
@@ -106,5 +107,91 @@
         private Button btnAprobarPedidos;
         private Button btnAccesoTotal;
         private Button btnAtrasLogin;
+    }*/
+    partial class FormMenu
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            btnSolicitarCompras = new Button();
+            btnVerificarPedidos = new Button();
+            btnAprobarPedidos = new Button();
+            btnAtrasMaL = new Button();
+            SuspendLayout();
+            // 
+            // btnSolicitarCompras
+            // 
+            btnSolicitarCompras.Location = new Point(13, 14);
+            btnSolicitarCompras.Margin = new Padding(4, 5, 4, 5);
+            btnSolicitarCompras.Name = "btnSolicitarCompras";
+            btnSolicitarCompras.Size = new Size(200, 46);
+            btnSolicitarCompras.TabIndex = 0;
+            btnSolicitarCompras.Text = "Solicitar Compras";
+            btnSolicitarCompras.UseVisualStyleBackColor = true;
+            btnSolicitarCompras.Click += btnSolicitarCompras_Click;
+            // 
+            // btnVerificarPedidos
+            // 
+            btnVerificarPedidos.Location = new Point(13, 74);
+            btnVerificarPedidos.Margin = new Padding(4, 5, 4, 5);
+            btnVerificarPedidos.Name = "btnVerificarPedidos";
+            btnVerificarPedidos.Size = new Size(200, 46);
+            btnVerificarPedidos.TabIndex = 1;
+            btnVerificarPedidos.Text = "Verificar Pedidos";
+            btnVerificarPedidos.UseVisualStyleBackColor = true;
+            btnVerificarPedidos.Click += btnVerificarPedidos_Click;
+            // 
+            // btnAprobarPedidos
+            // 
+            btnAprobarPedidos.Location = new Point(13, 141);
+            btnAprobarPedidos.Margin = new Padding(4, 5, 4, 5);
+            btnAprobarPedidos.Name = "btnAprobarPedidos";
+            btnAprobarPedidos.Size = new Size(200, 46);
+            btnAprobarPedidos.TabIndex = 2;
+            btnAprobarPedidos.Text = "Aprobar Pedidos";
+            btnAprobarPedidos.UseVisualStyleBackColor = true;
+            btnAprobarPedidos.Click += btnAprobarPedidos_Click;
+            // 
+            // btnAtrasMaL
+            // 
+            btnAtrasMaL.Location = new Point(270, 303);
+            btnAtrasMaL.Name = "btnAtrasMaL";
+            btnAtrasMaL.Size = new Size(94, 29);
+            btnAtrasMaL.TabIndex = 3;
+            btnAtrasMaL.Text = "Atras";
+            btnAtrasMaL.UseVisualStyleBackColor = true;
+            btnAtrasMaL.Click += btnAtrasMaL_Click;
+            // 
+            // FormMenu
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(618, 369);
+            Controls.Add(btnAtrasMaL);
+            Controls.Add(btnSolicitarCompras);
+            Controls.Add(btnVerificarPedidos);
+            Controls.Add(btnAprobarPedidos);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FormMenu";
+            Text = "Menú Principal";
+            Load += FormMenu_Load;
+            ResumeLayout(false);
+        }
+
+        private System.Windows.Forms.Button btnSolicitarCompras;
+        private System.Windows.Forms.Button btnVerificarPedidos;
+        private System.Windows.Forms.Button btnAprobarPedidos;
+        private System.Windows.Forms.Button btnAtrasMenu;
+        private Button btnAtrasMaL;
     }
 }

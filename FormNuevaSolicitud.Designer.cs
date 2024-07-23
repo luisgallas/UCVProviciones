@@ -37,7 +37,7 @@
          #endregion
 
      }*/
-    partial class FormNuevaSolicitud
+    /*partial class FormNuevaSolicitud
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -142,5 +142,126 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnGuardar;
         private Button btnAtrasNSC;
+    }*/
+    partial class FormNuevaSolicitud
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            dataGridViewSolicitudes = new DataGridView();
+            btnAgregarSolicitud = new Button();
+            btnGuardarSolicitudes = new Button();
+            txtDescripcion = new TextBox();
+            txtCantidad = new TextBox();
+            lblDescripcion = new Label();
+            lblCantidad = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewSolicitudes).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridViewSolicitudes
+            // 
+            dataGridViewSolicitudes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewSolicitudes.Location = new Point(16, 18);
+            dataGridViewSolicitudes.Margin = new Padding(4, 5, 4, 5);
+            dataGridViewSolicitudes.Name = "dataGridViewSolicitudes";
+            dataGridViewSolicitudes.RowHeadersWidth = 51;
+            dataGridViewSolicitudes.Size = new Size(1013, 462);
+            dataGridViewSolicitudes.TabIndex = 0;
+            // 
+            // btnAgregarSolicitud
+            // 
+            btnAgregarSolicitud.Location = new Point(16, 554);
+            btnAgregarSolicitud.Margin = new Padding(4, 5, 4, 5);
+            btnAgregarSolicitud.Name = "btnAgregarSolicitud";
+            btnAgregarSolicitud.Size = new Size(200, 46);
+            btnAgregarSolicitud.TabIndex = 1;
+            btnAgregarSolicitud.Text = "Agregar Solicitud";
+            btnAgregarSolicitud.UseVisualStyleBackColor = true;
+            btnAgregarSolicitud.Click += btnAgregarSolicitud_Click;
+            // 
+            // btnGuardarSolicitudes
+            // 
+            btnGuardarSolicitudes.Location = new Point(240, 554);
+            btnGuardarSolicitudes.Margin = new Padding(4, 5, 4, 5);
+            btnGuardarSolicitudes.Name = "btnGuardarSolicitudes";
+            btnGuardarSolicitudes.Size = new Size(200, 46);
+            btnGuardarSolicitudes.TabIndex = 2;
+            btnGuardarSolicitudes.Text = "Guardar Solicitudes";
+            btnGuardarSolicitudes.UseVisualStyleBackColor = true;
+            btnGuardarSolicitudes.Click += btnGuardarSolicitudes_Click;
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Location = new Point(16, 508);
+            txtDescripcion.Margin = new Padding(4, 5, 4, 5);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(199, 27);
+            txtDescripcion.TabIndex = 3;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(240, 508);
+            txtCantidad.Margin = new Padding(4, 5, 4, 5);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(199, 27);
+            txtCantidad.TabIndex = 4;
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Location = new Point(16, 483);
+            lblDescripcion.Margin = new Padding(4, 0, 4, 0);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(87, 20);
+            lblDescripcion.TabIndex = 5;
+            lblDescripcion.Text = "Descripción";
+            // 
+            // lblCantidad
+            // 
+            lblCantidad.AutoSize = true;
+            lblCantidad.Location = new Point(236, 483);
+            lblCantidad.Margin = new Padding(4, 0, 4, 0);
+            lblCantidad.Name = "lblCantidad";
+            lblCantidad.Size = new Size(69, 20);
+            lblCantidad.TabIndex = 6;
+            lblCantidad.Text = "Cantidad";
+            // 
+            // FormNuevaSolicitud
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1045, 632);
+            Controls.Add(lblCantidad);
+            Controls.Add(lblDescripcion);
+            Controls.Add(txtCantidad);
+            Controls.Add(txtDescripcion);
+            Controls.Add(btnGuardarSolicitudes);
+            Controls.Add(btnAgregarSolicitud);
+            Controls.Add(dataGridViewSolicitudes);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FormNuevaSolicitud";
+            Text = "Nueva Solicitud de Compras";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewSolicitudes).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        private System.Windows.Forms.DataGridView dataGridViewSolicitudes;
+        private System.Windows.Forms.Button btnAgregarSolicitud;
+        private System.Windows.Forms.Button btnGuardarSolicitudes;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblCantidad;
     }
 }
