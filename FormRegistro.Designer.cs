@@ -118,6 +118,7 @@ namespace UCVProviciones
             NombreNuevoUsuario = new Label();
             ContraseñaNueva = new Label();
             lblRolUsuario = new Label();
+            btnCancelarRU = new Button();
             SuspendLayout();
             // 
             // txtNuevoUsuario
@@ -165,7 +166,7 @@ namespace UCVProviciones
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
-            cmbRol.Items.AddRange(new object[] { "funcionario", "directivo", "administrador" });
+            cmbRol.Items.AddRange(new object[] { "Funcionario", "Directivo", "Administrador" });
             cmbRol.Location = new Point(122, 262);
             cmbRol.Margin = new Padding(4, 5, 4, 5);
             cmbRol.Name = "cmbRol";
@@ -210,11 +211,22 @@ namespace UCVProviciones
             lblRolUsuario.TabIndex = 12;
             lblRolUsuario.Text = "Rol del Usuario";
             // 
+            // btnCancelarRU
+            // 
+            btnCancelarRU.Location = new Point(294, 342);
+            btnCancelarRU.Name = "btnCancelarRU";
+            btnCancelarRU.Size = new Size(99, 35);
+            btnCancelarRU.TabIndex = 13;
+            btnCancelarRU.Text = "Cancelar";
+            btnCancelarRU.UseVisualStyleBackColor = true;
+            btnCancelarRU.Click += btnCancelarRU_Click;
+            // 
             // FormRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(687, 439);
+            Controls.Add(btnCancelarRU);
             Controls.Add(lblRolUsuario);
             Controls.Add(ContraseñaNueva);
             Controls.Add(NombreNuevoUsuario);
@@ -242,5 +254,6 @@ namespace UCVProviciones
         private Label NombreNuevoUsuario;
         private Label ContraseñaNueva;
         private Label lblRolUsuario;
+        private Button btnCancelarRU;
     }
 }

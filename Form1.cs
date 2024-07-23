@@ -5,6 +5,7 @@ namespace UCVProviciones
     public partial class Form1 : Form
     {
         private const string UsuariosFilePath = "usuarios.json";
+        private bool mostrasContrasena = false;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +24,8 @@ namespace UCVProviciones
             var rol = ValidarUsuario(usuario, contraseña);
             if (rol != null)
             {
-               // MessageBox.Show("Login exitoso");
-                FormMenu formMenu = new FormMenu(usuario,rol);
+                // MessageBox.Show("Login exitoso");
+                FormMenu formMenu = new FormMenu(usuario, rol);
                 formMenu.Show();
                 this.Hide();
             }
@@ -67,6 +68,22 @@ namespace UCVProviciones
             }
 
             return null;
+        }
+
+        private void pbcontrasena_Click(object sender, EventArgs e)
+        {
+            mostrasContrasena = !mostrasContrasena;
+            if (mostrasContrasena)
+            {
+                txtContraseña.PasswordChar = '\0';
+                pbcontrasena.Image = UCVProviciones.Properties.Resources.ocultacontrasena;
+
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '*';
+                pbcontrasena.Image = UCVProviciones.Properties.Resources.vercontrasena ;
+            }
         }
     }
 }

@@ -53,6 +53,7 @@
         {
             dataGridViewPedidos = new DataGridView();
             btnCerrar = new Button();
+            lblPedidosRealizados = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPedidos).BeginInit();
             SuspendLayout();
             // 
@@ -77,11 +78,23 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
             // 
+            // lblPedidosRealizados
+            // 
+            lblPedidosRealizados.AutoSize = true;
+            lblPedidosRealizados.Font = new Font("Stencil", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPedidosRealizados.ForeColor = Color.Red;
+            lblPedidosRealizados.Location = new Point(314, 33);
+            lblPedidosRealizados.Name = "lblPedidosRealizados";
+            lblPedidosRealizados.Size = new Size(300, 33);
+            lblPedidosRealizados.TabIndex = 2;
+            lblPedidosRealizados.Text = "PEDIDOS REALIZADOS";
+            // 
             // FormVerificarPedidos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1045, 586);
+            Controls.Add(lblPedidosRealizados);
             Controls.Add(btnCerrar);
             Controls.Add(dataGridViewPedidos);
             Margin = new Padding(4, 5, 4, 5);
@@ -90,9 +103,11 @@
             Load += FormVerificarPedidos_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewPedidos).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.DataGridView dataGridViewPedidos;
         private System.Windows.Forms.Button btnCerrar;
+        private Label lblPedidosRealizados;
     }
 }

@@ -52,5 +52,10 @@ namespace UCVProviciones
             MessageBox.Show("Usuario registrado exitosamente");
             this.Close();
         }
+
+        private void btnCancelarRU_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

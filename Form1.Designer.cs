@@ -29,6 +29,12 @@
             txtContraseña = new TextBox();
             btnRegistrar_Click = new Button();
             lblProviciones = new Label();
+            pbcontrasena = new PictureBox();
+            pbUsuario = new PictureBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbcontrasena).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbUsuario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnAceptar_Click
@@ -71,7 +77,7 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(343, 151);
+            txtUsuario.Location = new Point(343, 146);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(177, 27);
             txtUsuario.TabIndex = 4;
@@ -80,6 +86,7 @@
             // 
             txtContraseña.Location = new Point(343, 254);
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(177, 27);
             txtContraseña.TabIndex = 5;
             // 
@@ -104,11 +111,45 @@
             lblProviciones.TabIndex = 7;
             lblProviciones.Text = "PROVISIONES UC GUAIRA";
             // 
+            // pbcontrasena
+            // 
+            pbcontrasena.Image = Properties.Resources.vercontrasena;
+            pbcontrasena.Location = new Point(539, 244);
+            pbcontrasena.Name = "pbcontrasena";
+            pbcontrasena.Size = new Size(50, 37);
+            pbcontrasena.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbcontrasena.TabIndex = 8;
+            pbcontrasena.TabStop = false;
+            pbcontrasena.Click += pbcontrasena_Click;
+            // 
+            // pbUsuario
+            // 
+            pbUsuario.Image = Properties.Resources.usuario;
+            pbUsuario.Location = new Point(287, 146);
+            pbUsuario.Name = "pbUsuario";
+            pbUsuario.Size = new Size(37, 27);
+            pbUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbUsuario.TabIndex = 9;
+            pbUsuario.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.candado1;
+            pictureBox1.Location = new Point(287, 254);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(37, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 485);
+            Controls.Add(pictureBox1);
+            Controls.Add(pbUsuario);
+            Controls.Add(pbcontrasena);
             Controls.Add(lblProviciones);
             Controls.Add(btnRegistrar_Click);
             Controls.Add(txtContraseña);
@@ -120,6 +161,9 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pbcontrasena).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbUsuario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,5 +178,8 @@
         private TextBox txtContraseña;
         private Button btnRegistrar_Click;
         private Label lblProviciones;
+        private PictureBox pbcontrasena;
+        private PictureBox pbUsuario;
+        private PictureBox pictureBox1;
     }
 }

@@ -165,17 +165,18 @@
             txtCantidad = new TextBox();
             lblDescripcion = new Label();
             lblCantidad = new Label();
+            btnAtrasNSC = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSolicitudes).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewSolicitudes
             // 
             dataGridViewSolicitudes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewSolicitudes.Location = new Point(16, 18);
+            dataGridViewSolicitudes.Location = new Point(16, 27);
             dataGridViewSolicitudes.Margin = new Padding(4, 5, 4, 5);
             dataGridViewSolicitudes.Name = "dataGridViewSolicitudes";
             dataGridViewSolicitudes.RowHeadersWidth = 51;
-            dataGridViewSolicitudes.Size = new Size(1013, 462);
+            dataGridViewSolicitudes.Size = new Size(1013, 453);
             dataGridViewSolicitudes.TabIndex = 0;
             // 
             // btnAgregarSolicitud
@@ -236,11 +237,22 @@
             lblCantidad.TabIndex = 6;
             lblCantidad.Text = "Cantidad";
             // 
+            // btnAtrasNSC
+            // 
+            btnAtrasNSC.Location = new Point(799, 554);
+            btnAtrasNSC.Name = "btnAtrasNSC";
+            btnAtrasNSC.Size = new Size(109, 46);
+            btnAtrasNSC.TabIndex = 7;
+            btnAtrasNSC.Text = "Atras";
+            btnAtrasNSC.UseVisualStyleBackColor = true;
+            btnAtrasNSC.Click += btnAtrasNSC_Click;
+            // 
             // FormNuevaSolicitud
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1045, 632);
+            Controls.Add(btnAtrasNSC);
             Controls.Add(lblCantidad);
             Controls.Add(lblDescripcion);
             Controls.Add(txtCantidad);
@@ -263,5 +275,6 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblCantidad;
+        private Button btnAtrasNSC;
     }
 }

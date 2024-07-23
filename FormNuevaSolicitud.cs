@@ -152,7 +152,12 @@ namespace UCVProviciones
             txtDescripcion.Clear();
             txtCantidad.Clear();
         }
+
+        private void btnAtrasNSC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-    
+
 }
 
