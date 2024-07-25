@@ -53,6 +53,42 @@ namespace UCVProviciones
         }
         private string ValidarUsuario(string usuario, string contraseña)//poner de nuevo boll despues
         {
+
+            if (File.Exists(UsuariosFilePath))
+            {
+                var jsonData = File.ReadAllText(UsuariosFilePath);
+                var usuarios = JArray.Parse(jsonData);
+
+                foreach (var u in usuarios)
+                {
+                    var usuarioToken = u.SelectToken("usuario");
+                    var contraseñaToken = u.SelectToken("contraseña");
+
+                    if (usuarioToken != null && contraseñaToken != null)
+                    {
+                        string usuarioValor = usuarioToken.ToString();
+                        string contraseñaValor = contraseñaToken.ToString();
+
+                        if (usuarioValor == usuario && contraseñaValor == contraseña)
+                        {
+                            var rolToken = u.SelectToken("rol");
+                            if (rolToken != null)
+                            {
+                                return rolToken.ToString();
+                            }
+                        }
+                    }
+                    /*if (u["usuario"].ToString() == usuario && u["contraseña"].ToString() == contraseña)
+                    {
+                        return u["rol"].ToString();
+                    }*/
+                }
+            }
+            return null;
+        }
+            /*if (File.Exists(UsuariosFilePath))
+            {
+             
             if (File.Exists(UsuariosFilePath))
             {
                 var jsonData = File.ReadAllText(UsuariosFilePath);
@@ -62,13 +98,19 @@ namespace UCVProviciones
                 {
                     if (u["usuario"].ToString() == usuario && u["contraseña"].ToString() == contraseña)
                     {
-                        return u["rol"].ToString();
+                        // Aquí ajustamos para manejar un booleano
+                        bool esFuncionario = (bool)u["rol"];
+                        if (esFuncionario)
+                            return "funcionario";
+                        else
+                            return "administrador"; // Asumiendo que hay un solo administrador por ahora
                     }
                 }
             }
 
-            return null;
-        }
+            return null;*/
+       // }
+
 
         private void pbcontrasena_Click(object sender, EventArgs e)
         {
@@ -82,8 +124,10 @@ namespace UCVProviciones
             else
             {
                 txtContraseña.PasswordChar = '*';
-                pbcontrasena.Image = UCVProviciones.Properties.Resources.vercontrasena ;
+                pbcontrasena.Image = UCVProviciones.Properties.Resources.vercontrasena;
             }
         }
+
+        
     }
 }

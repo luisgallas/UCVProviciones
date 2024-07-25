@@ -119,6 +119,12 @@ namespace UCVProviciones
             ContraseñaNueva = new Label();
             lblRolUsuario = new Label();
             btnCancelarRU = new Button();
+            pbUsuarioNew = new PictureBox();
+            pbContrasenaNew = new PictureBox();
+            pbpasswordNew = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbUsuarioNew).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbContrasenaNew).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbpasswordNew).BeginInit();
             SuspendLayout();
             // 
             // txtNuevoUsuario
@@ -166,7 +172,7 @@ namespace UCVProviciones
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
-            cmbRol.Items.AddRange(new object[] { "Funcionario", "Directivo", "Administrador" });
+            cmbRol.Items.AddRange(new object[] { "funcionario", "directivo", "administrador" });
             cmbRol.Location = new Point(122, 262);
             cmbRol.Margin = new Padding(4, 5, 4, 5);
             cmbRol.Name = "cmbRol";
@@ -221,11 +227,45 @@ namespace UCVProviciones
             btnCancelarRU.UseVisualStyleBackColor = true;
             btnCancelarRU.Click += btnCancelarRU_Click;
             // 
+            // pbUsuarioNew
+            // 
+            pbUsuarioNew.Image = Properties.Resources.usuario;
+            pbUsuarioNew.Location = new Point(78, 104);
+            pbUsuarioNew.Name = "pbUsuarioNew";
+            pbUsuarioNew.Size = new Size(37, 27);
+            pbUsuarioNew.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbUsuarioNew.TabIndex = 14;
+            pbUsuarioNew.TabStop = false;
+            // 
+            // pbContrasenaNew
+            // 
+            pbContrasenaNew.Image = Properties.Resources.candado1;
+            pbContrasenaNew.Location = new Point(78, 176);
+            pbContrasenaNew.Name = "pbContrasenaNew";
+            pbContrasenaNew.Size = new Size(37, 27);
+            pbContrasenaNew.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbContrasenaNew.TabIndex = 15;
+            pbContrasenaNew.TabStop = false;
+            // 
+            // pbpasswordNew
+            // 
+            pbpasswordNew.Image = Properties.Resources.vercontrasena;
+            pbpasswordNew.Location = new Point(347, 168);
+            pbpasswordNew.Name = "pbpasswordNew";
+            pbpasswordNew.Size = new Size(57, 43);
+            pbpasswordNew.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbpasswordNew.TabIndex = 16;
+            pbpasswordNew.TabStop = false;
+            pbpasswordNew.Click += pbpasswordNew_Click;
+            // 
             // FormRegistro
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(687, 439);
+            Controls.Add(pbpasswordNew);
+            Controls.Add(pbContrasenaNew);
+            Controls.Add(pbUsuarioNew);
             Controls.Add(btnCancelarRU);
             Controls.Add(lblRolUsuario);
             Controls.Add(ContraseñaNueva);
@@ -240,6 +280,9 @@ namespace UCVProviciones
             Margin = new Padding(4, 5, 4, 5);
             Name = "FormRegistro";
             Text = "Registro de Usuario";
+            ((System.ComponentModel.ISupportInitialize)pbUsuarioNew).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbContrasenaNew).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbpasswordNew).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -255,5 +298,8 @@ namespace UCVProviciones
         private Label ContraseñaNueva;
         private Label lblRolUsuario;
         private Button btnCancelarRU;
+        private PictureBox pbUsuarioNew;
+        private PictureBox pbContrasenaNew;
+        private PictureBox pbpasswordNew;
     }
 }

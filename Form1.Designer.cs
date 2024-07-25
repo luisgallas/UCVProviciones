@@ -39,7 +39,7 @@
             // 
             // btnAceptar_Click
             // 
-            btnAceptar_Click.Location = new Point(267, 335);
+            btnAceptar_Click.Location = new Point(427, 335);
             btnAceptar_Click.Name = "btnAceptar_Click";
             btnAceptar_Click.Size = new Size(94, 29);
             btnAceptar_Click.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // btnCancelar_Click
             // 
-            btnCancelar_Click.Location = new Point(445, 335);
+            btnCancelar_Click.Location = new Point(614, 335);
             btnCancelar_Click.Name = "btnCancelar_Click";
             btnCancelar_Click.Size = new Size(94, 29);
             btnCancelar_Click.TabIndex = 1;
@@ -60,7 +60,7 @@
             // lableUsuario
             // 
             lableUsuario.AutoSize = true;
-            lableUsuario.Location = new Point(343, 113);
+            lableUsuario.Location = new Point(427, 112);
             lableUsuario.Name = "lableUsuario";
             lableUsuario.Size = new Size(59, 20);
             lableUsuario.TabIndex = 2;
@@ -69,7 +69,7 @@
             // labelContraseña
             // 
             labelContraseña.AutoSize = true;
-            labelContraseña.Location = new Point(343, 209);
+            labelContraseña.Location = new Point(427, 213);
             labelContraseña.Name = "labelContraseña";
             labelContraseña.Size = new Size(83, 20);
             labelContraseña.TabIndex = 3;
@@ -77,14 +77,16 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(343, 146);
+            txtUsuario.BackColor = SystemColors.Control;
+            txtUsuario.Location = new Point(427, 146);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(177, 27);
             txtUsuario.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(343, 254);
+            txtContraseña.BackColor = SystemColors.Control;
+            txtContraseña.Location = new Point(427, 254);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.PasswordChar = '*';
             txtContraseña.Size = new Size(177, 27);
@@ -105,7 +107,7 @@
             lblProviciones.AutoSize = true;
             lblProviciones.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblProviciones.ForeColor = SystemColors.ActiveCaptionText;
-            lblProviciones.Location = new Point(233, 30);
+            lblProviciones.Location = new Point(337, 29);
             lblProviciones.Name = "lblProviciones";
             lblProviciones.Size = new Size(371, 35);
             lblProviciones.TabIndex = 7;
@@ -113,10 +115,11 @@
             // 
             // pbcontrasena
             // 
+            pbcontrasena.BackColor = Color.Transparent;
             pbcontrasena.Image = Properties.Resources.vercontrasena;
-            pbcontrasena.Location = new Point(539, 244);
+            pbcontrasena.Location = new Point(624, 244);
             pbcontrasena.Name = "pbcontrasena";
-            pbcontrasena.Size = new Size(50, 37);
+            pbcontrasena.Size = new Size(47, 37);
             pbcontrasena.SizeMode = PictureBoxSizeMode.StretchImage;
             pbcontrasena.TabIndex = 8;
             pbcontrasena.TabStop = false;
@@ -125,7 +128,7 @@
             // pbUsuario
             // 
             pbUsuario.Image = Properties.Resources.usuario;
-            pbUsuario.Location = new Point(287, 146);
+            pbUsuario.Location = new Point(372, 146);
             pbUsuario.Name = "pbUsuario";
             pbUsuario.Size = new Size(37, 27);
             pbUsuario.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -135,7 +138,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.candado1;
-            pictureBox1.Location = new Point(287, 254);
+            pictureBox1.Location = new Point(372, 254);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(37, 27);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -146,6 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(885, 485);
             Controls.Add(pictureBox1);
             Controls.Add(pbUsuario);
